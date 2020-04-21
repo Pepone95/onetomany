@@ -8,6 +8,6 @@
     <title>Welcome</title>
 </head>
 <body>
-    <h1 class="text-danger text-center mt-5">Hello</h1>
+   
 </body>
 </html>
