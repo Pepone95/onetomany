@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/app.css">
-    <title>Document</title>
+    <title>Welcome</title>
 </head>
 <body>
-    
+    <h1 class="text-danger text-center mt-5">Hello</h1>
 </body>
 </html>
