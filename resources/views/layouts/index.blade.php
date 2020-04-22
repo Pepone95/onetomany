@@ -8,18 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarNav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark mb-5 ">
+        <div class="collapse navbar-collapse d-flex justify-content-center " id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link text-white font-weight-bold h1" href="/">HOME</a>
+            </li>
+            {{-- <li class="nav-item">
+              <a class="nav-link text-danger" href="/users">Users</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/users">Users</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/projet">Projet</a>
-            </li>
+              <a class="nav-link text-danger" href="/projet">Projet</a>
+            </li> --}}
           </ul>
         </div>
       </nav>
