@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+use App\Projet;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,8 +14,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/',  function(){
+     $projets= Projet::all();
+     $users= User::all();
+    return view('welcome', compact('projets', 'users'));
+});
 
+    
+    
+// Route::resource('/users', 'UserController');
+Route::resource('/projet', 'ProjetController');
 
-Route::resource('/', 'ProjetController');
 
 
