@@ -14,7 +14,8 @@ class ProjetController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $projets = Projet::all();
+        return view('welcome', compact('projets'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ProjetController extends Controller
      */
     public function create()
     {
-        //
+        return view('/projets.create');
     }
 
     /**
