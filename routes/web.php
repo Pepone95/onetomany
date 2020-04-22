@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::resource('/projets', 'ProjetController');
+Route::resource('/', 'ProjetController');
