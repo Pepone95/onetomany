@@ -27,7 +27,7 @@ class ProjetController extends Controller
      */
     public function create()
     {
-        
+
         $users= User::all();
         return view('/projets.create', compact('users'));
     }
@@ -38,9 +38,15 @@ class ProjetController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+        $projets=new Projet();
+        $projets->prenom=request('prenom');
+        $projets->user_id=request('user_id');
+        $projets->name=request('name');
+        $projets->description=request('description');
+        $projets->save();
+        return redirect('/');
     }
 
     /**
