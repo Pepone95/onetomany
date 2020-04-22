@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Projet;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,9 @@ class ProjetController extends Controller
      */
     public function index()
     {
+        $users = User::all();
         $projets = Projet::all();
-        return view('welcome', compact('projets'));
+        return view('welcome', compact('projets', 'users'));
     }
 
     /**
@@ -25,7 +27,9 @@ class ProjetController extends Controller
      */
     public function create()
     {
-        return view('/projets.create');
+        
+        $users= User::all();
+        return view('/projets.create', compact('users'));
     }
 
     /**
