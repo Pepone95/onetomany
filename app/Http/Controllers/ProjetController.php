@@ -91,6 +91,7 @@ class ProjetController extends Controller
      */
     public function destroy(Projet $projet)
     {
-        //
+        $projet->delete();
+        return redirect()->back();
     }
 }
