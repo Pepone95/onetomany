@@ -37393,8 +37393,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
+__webpack_require__(/*! /home/molengeek/Coding-school-12/laravel/onetomany/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/molengeek/Coding-school-12/laravel/onetomany/resources/sass/app.scss */"./resources/sass/app.scss");
+=======
 __webpack_require__(/*! /home/molengeek/Coding-School-12/Laravel/onetomany/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /home/molengeek/Coding-School-12/Laravel/onetomany/resources/sass/app.scss */"./resources/sass/app.scss");
+>>>>>>> be6bdf3ebf8f7f70df723e045312995cb41686e4
 
 
 /***/ })
