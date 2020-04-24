@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Taches;
+use App\User;
 use Illuminate\Http\Request;
 
 class TachesController extends Controller
@@ -14,7 +15,9 @@ class TachesController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        $tachess = Taches::all();
+        return view('welcome', compact('tachess', 'users'));
     }
 
     /**
@@ -24,7 +27,8 @@ class TachesController extends Controller
      */
     public function create()
     {
-        //
+        $tachess= Taches::all();
+        return view('/taches.create', compact('tachess'));
     }
 
     /**

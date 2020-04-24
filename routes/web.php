@@ -22,7 +22,7 @@ Route::get('/',  function(){
 
     
     
-// Route::resource('/users', 'UserController');
+Route::resource('/taches', 'TachesController');
 Route::resource('/projet', 'ProjetController');
 
 
