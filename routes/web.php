@@ -2,6 +2,8 @@
 
 use App\User;
 use App\Projet;
+use App\Taches;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,13 +19,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',  function(){
      $projets= Projet::all();
      $users= User::all();
-    return view('welcome', compact('projets', 'users'));
+     $taches= Taches::all();
+    return view('welcome', compact('projets', 'users', 'taches'));
 });
 
     
     
 // Route::resource('/users', 'UserController');
 Route::resource('/projet', 'ProjetController');
+Route::resource('/taches', 'TachesController');
 
 
 

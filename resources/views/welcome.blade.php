@@ -29,7 +29,10 @@
         @csrf
         @method('delete')
         <button type="submit" class="btn btn-danger mb-2">Delete</button>
-    </form><hr class="bg-dark">
+        <a href="/taches/create" class="btn btn-success mb-5">Create Tache</a>
+    </form>
+ 
+    <hr class="bg-dark">
     <div class="col-2 mb-3"> <span class="font-weight-bold text-primary "> Prénom : </span>  {{$projet->prenom}} </div> <hr class='bg-dark'>
     <div class="col-2 mb-3"> <span class="font-weight-bold text-primary "> Nom du Projet : </span>  {{$projet->name}} </div> <hr class="bg-dark">
     <div class="col-3 mb-3"> <span class="font-weight-bold text-primary "> Description : </span>  {{$projet->description}} </div> <hr class="bg-dark">

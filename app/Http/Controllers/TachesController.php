@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Projet;
 use App\Taches;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,9 @@ class TachesController extends Controller
      */
     public function index()
     {
-        //
+        $projets = Projet::all();
+        $taches = Taches::all();
+        return view('welcome', compact('taches', 'projets'));
     }
 
     /**
@@ -24,7 +26,8 @@ class TachesController extends Controller
      */
     public function create()
     {
-        //
+        $projets= Projet::all();
+        return view('/taches.create', compact('projets'));
     }
 
     /**
@@ -35,7 +38,13 @@ class TachesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $taches=new Taches();
+        $taches->prenom=request('prenom');
+        $taches->projet_id=request('projet_id');
+        $taches->name=request('name');
+        $taches->description=request('description');
+        $taches->save();
+        return redirect('/');
     }
 
     /**
